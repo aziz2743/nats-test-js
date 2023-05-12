@@ -15,15 +15,16 @@ spec:
       containers:
         - name: nats
           image: nats:2.9-alpine
-          # args:
-          #   [
-          #     '-p',
-          #     '4222',
-          #     '-m',
-          #     '8222',
-          #     '--cluster_name',
-          #     'nats-testing',
-          # ]
+          args:
+            [
+              '-p',
+              '4222',
+              '-m',
+              '8222',
+              '-js',
+              '--cluster_name',
+              'nats-testing',
+          ]
           resources:
             limits:
               memory: "512Mi"

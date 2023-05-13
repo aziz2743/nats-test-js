@@ -14,14 +14,13 @@ spec:
     spec:
       containers:
         - name: nats
-          image: nats:2.9-alpine
+          image: nats:latest
           args:
             [
               '-p',
               '4222',
               '-m',
               '8222',
-              '-js',
               '--cluster_name',
               'nats-testing',
           ]
